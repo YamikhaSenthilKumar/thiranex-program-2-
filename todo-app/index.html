@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yamikha's To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <h1>Yamikha's To-Do List</h1>
+
+        <form id="task-form">
+            <label for="task-input">Add a task</label>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Enter a task..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">Add</button>
+            </div>
+        </form>
+
+        <div class="filters" aria-label="Task filters">
+            <button type="button" class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button type="button" class="filter" data-filter="active">
+                Active
+            </button>
+
+            <button type="button" class="filter" data-filter="completed">
+                Completed
+            </button>
+        </div>
+
+        <ul id="task-list" aria-live="polite"></ul>
+
+        <p id="task-count">0 tasks</p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
